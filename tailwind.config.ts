@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         header: 'url("/bg-cafe.jpg")',
+        collection: 'url("/vector.svg")',
       },
       colors: {
         'bg-price': 'var(--bg-price)',
