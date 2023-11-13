@@ -10,18 +10,12 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  --bg-price: #BEE3CC;
+  --sold-out: #ED735D;
+  --popular: #F6C768;
+  --titles: #FEF7EE;
+  --bg-body: #111315;
+  --bg-secondary: #1B1D1F;
+  --text-description: #6F757C;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
