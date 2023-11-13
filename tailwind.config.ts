@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        header: 'url("/bg-cafe.jpg")',
+      },
       colors: {
         'bg-price': 'var(--bg-price)',
         'sold-out': 'var(--sold-out)',
