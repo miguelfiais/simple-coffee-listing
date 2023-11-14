@@ -1,4 +1,6 @@
-interface ICoffee {
+import CoffeeCard from './coffee-card'
+
+export interface ICoffee {
   id: number
   name: string
   image: string
@@ -18,8 +20,13 @@ export const getCoffeeListing = async () => {
 
 const CoffeeListing = async () => {
   const coffeeListing = await getCoffeeListing()
-  console.log(coffeeListing)
-  return <div>CoffeeListing</div>
+  return (
+    <div className="grid justify-items-center gap-8 py-8">
+      {coffeeListing.map((coffee) => (
+        <CoffeeCard key={coffee.id} coffee={coffee} />
+      ))}
+    </div>
+  )
 }
 
 export default CoffeeListing
