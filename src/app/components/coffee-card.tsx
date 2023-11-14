@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { ICoffee } from './coffee-listing'
+import { ICoffee } from '../page'
 
 interface CoffeeCardProps {
   coffee: ICoffee

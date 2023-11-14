@@ -1,7 +1,26 @@
 import Image from 'next/image'
 import CoffeeListing from './components/coffee-listing'
 
-export default function Home() {
+export interface ICoffee {
+  id: number
+  name: string
+  image: string
+  price: string
+  rating: string | number | null
+  votes: number
+  popular: boolean
+  available: boolean
+}
+
+export const getCoffeeListing = async () => {
+  const coffeeListing = (await fetch(
+    'https://raw.githubusercontent.com/devchallenges-io/web-project-ideas/main/front-end-projects/data/simple-coffee-listing-data.json',
+  ).then((response) => response.json())) as ICoffee[]
+  return coffeeListing
+}
+
+export default async function Home() {
+  const coffeeListing = await getCoffeeListing()
   return (
     <main>
       <Image
@@ -22,7 +41,7 @@ export default function Home() {
               batches and shipped fresh weekly.
             </p>
           </div>
-          <CoffeeListing />
+          <CoffeeListing coffeeListing={coffeeListing} />
         </div>
       </div>
     </main>
