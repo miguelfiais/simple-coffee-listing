@@ -38,7 +38,7 @@ const CoffeeListing = ({ coffeeListing }: CoffeeListingProps) => {
           </li>
         </ul>
       </nav>
-      <div className="grid justify-items-center gap-8">
+      <div className="mx-auto grid w-fit justify-items-center gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {filteredCoffeeListing.map((coffee) => (
           <CoffeeCard key={coffee.id} coffee={coffee} />
         ))}

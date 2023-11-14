@@ -31,11 +31,13 @@ export default async function Home() {
         sizes="100vw"
         className="w-full"
       />
-      <div className="relative -top-12 px-8">
+      <div className="relative -top-12 px-8 sm:-top-14 md:-top-16 lg:-top-20 xl:-top-24">
         <div className="container mx-auto rounded-lg bg-bg-secondary px-5 py-8">
           <div className="flex flex-col items-center bg-collection bg-top bg-no-repeat pt-12 text-center">
-            <h1 className="text-2xl font-bold text-titles">Our Collection</h1>
-            <p className="mt-3 text-sm font-semibold text-text-description">
+            <h1 className="text-2xl font-bold text-titles md:text-3xl lg:text-4xl">
+              Our Collection
+            </h1>
+            <p className="mt-3 max-w-xs text-sm font-semibold text-text-description sm:max-w-sm md:max-w-md md:text-base lg:max-w-lg">
               Introducing our Coffee Collection, a selection of unique coffees
               from different roast types and origins, expertly roasted in small
               batches and shipped fresh weekly.

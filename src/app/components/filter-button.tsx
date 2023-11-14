@@ -9,7 +9,7 @@ const FilterButton = ({ active, ...props }: FilterButtonProps) => {
     <button
       data-active={active}
       {...props}
-      className="rounded-lg px-4 py-2 text-sm font-semibold text-titles data-[active=true]:bg-text-description"
+      className="rounded-lg px-4 py-2 text-sm font-semibold text-titles data-[active=true]:bg-text-description md:text-base"
     />
   )
 }
